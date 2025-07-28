@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   SignedIn,
   SignedOut,
@@ -11,11 +12,15 @@ export default function Page() {
   return (
     <div className="flex h-screen w-full items-center justify-center">
       <SignedOut>
-        <SignInButton mode="modal" />
+        <SignInButton mode="modal">
+          <Button variant="ghost" size="lg" className="flex items-center gap-2">
+            Sign In
+          </Button>
+        </SignInButton>
         <SignUpButton>
-          <button className="bg-[#6c47ff] text-ceramic-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
+          <Button size="lg" className="flex items-center gap-2">
             Sign Up
-          </button>
+          </Button>
         </SignUpButton>
       </SignedOut>
       <SignedIn>
